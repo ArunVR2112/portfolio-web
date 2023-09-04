@@ -2,13 +2,16 @@
   margin: 0;
   padding: 0;
 }
-#wrapper {
+
+.wrapper {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
 }
+
 .container {
   width: 100%;
   height: 100vh;
@@ -17,6 +20,7 @@
 }
 
 .subContainer {
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -58,25 +62,26 @@
   padding-left: 70rem;
   padding-top: 2.5rem;
   cursor: pointer;
+
 }
 
 .header a {
   padding-right: 10px;
   text-decoration: none;
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.559);
+  color: rgba(0, 0, 0, 1);
   border-radius: 10%;
-  box-shadow: 2px 3px 5px rgba(95, 124, 72, 0.553);
+
 }
 
-.header a:hover{
+.header a:hover {
   transform: scale(1.2);
   color: #d43434;
-  
+
 }
 
 /* imgae */
-.imgae{
+.image {
   position: absolute;
   margin-left: 65%;
   margin-top: 10%;
@@ -85,7 +90,8 @@
   height: 22rem;
   border-radius: 20%;
 }
-.imgae img{
+
+.image img {
   width: 20rem;
   height: 22rem;
   border-radius: 20%;
@@ -93,9 +99,12 @@
 
 /* About */
 .about {
-  width: 42rem;
-  padding-top: 18rem;
+  /* display: flex; */
+  position: absolute;
+  height: 40vh;
+  width: 40rem;
   padding-left: 14rem;
+  margin-top: 15rem;
 }
 
 .about h1 {
@@ -103,15 +112,14 @@
 }
 
 .heading {
-
   color: rgb(37, 6, 74);
   padding-top: 15px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .role {
   color: #a11f81;
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   font-weight: 1000;
 }
 
@@ -119,9 +127,26 @@
   color: #07682bf6;
   font-size: 18px;
   margin-top: 1rem;
-  width: 70%;
+  width: 62%;
   font-weight: 500;
 }
+
+/* Name */
+.name {
+  position: relative;
+  margin-top: 40rem;
+  margin-left: 26rem;
+}
+
+.name h1 {
+
+  font-weight: 800;
+  font-size: 5rem;
+  color: #dcf4f4;
+}
+
+
+
 
 .btn {
   margin-top: 2rem;
@@ -162,17 +187,6 @@
   color: black;
 }
 
-.name {
-  margin-top: 6rem;
-  margin-left: 24rem;
-}
-
-.name h1 {
-  color: #9b69696f;
-  font-weight: 800;
-  font-size: 5rem;
-}
-
 /* Projects */
 .projects {
 
@@ -197,7 +211,7 @@
 
 /* Skills */
 .skill {
-  background-color:#fff;
+  background-color: #fff;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -238,9 +252,11 @@
   width: 50%;
   position: relative;
   justify-content: center;
+
 }
 
 .sublogo {
+
   margin-top: 35%;
   display: grid;
   height: 1vh;
@@ -248,6 +264,7 @@
 }
 
 .skillsLogo {
+  display: flex;
   width: 80px;
   transition: all 0.5s;
 }
@@ -258,7 +275,6 @@
 
 
 .rightSkillContainer {
-
   margin-top: 15%;
   margin-left: 15%;
   display: flex;
@@ -268,15 +284,19 @@
   width: 40%;
   position: relative;
   justify-content: center;
+
 }
+
 .skillsLogo {
   height: 5.5rem;
   width: 80px;
   transition: all 0.5s;
 }
+
 .skillsLogo:hover {
   transform: scale(1.8);
 }
+
 .skillFadedText {
   font-size: 12em;
   right: -9%;
@@ -322,6 +342,7 @@
   flex-direction: column;
   gap: 30px;
 }
+
 .formField {
   width: 100%;
   height: 42px;
@@ -394,26 +415,241 @@ footer {
   transition: all 0.6s;
 }
 
-.linkContainer div a:hover{
+.linkContainer div a:hover {
   color: #e84949;
 }
 
-.iconContainer{
+.iconContainer {
   margin-left: 45%;
   margin-bottom: 5%;
   display: flex;
   gap: 1rem;
 }
 
-.iconContainer a{
+.iconContainer a {
   text-decoration: none;
   color: #c9cbcb;
 }
+
 .iconContainer a:focus {
   color: #40a97b;
 }
-.iconContainer a:hover
-{
+
+.iconContainer a:hover {
   color: #96c8d1;
   transform: scale(1.8);
+}
+
+/* Nav Bar  */
+.navbar {
+  display: none;
+  cursor: pointer;
+  margin-left: 65%;
+  top: 55px;
+
+}
+
+.line {
+  width: 33px;
+  background-color: white;
+  height: 4px;
+  margin: 5px 3px;
+}
+
+.nav-bar {
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  align-items: center;
+  padding-top: 3rem;
+  left: 57rem;
+
+}
+
+.nav-list li {
+  list-style: none;
+  padding: 20px 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+.nav-list li a:hover {
+  color: #d43434;
+}
+
+/*  */
+@media screen and (max-width: 1140px) {
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .container {
+    height: fit-content;
+  }
+
+  .subContainer {
+    flex-direction: column;
+    position: absolute;
+    height: max-content;
+  }
+
+  /* header section */
+
+  .logo {
+    padding-top: 2px;
+    position: absolute;
+    height: 4rem;
+    width: 7rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tagh1 h1 {
+    position: absolute;
+    font-size: 2.7rem;
+    margin-left: -2.4rem;
+
+  }
+
+  /* nav bar */
+
+  .nav-bar {
+    position: relative;
+    flex-direction: column;
+    right: 25%;
+    margin-top: 4.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    top: 9%;
+    left: 45%;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .image {
+    position: relative;
+    margin-top: 70px;
+    right: 10px;
+    height: 12rem;
+    width: 9rem;
+    border: 2px solid;
+  }
+
+  .image img {
+    height: 12rem;
+    width: 9rem;
+  }
+
+  /* .h-nav-resp{
+    height: 20px;
+  } */
+  #v-nav-resp {
+    visibility: hidden;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-top: 9rem;
+  }
+
+  .role {
+    font-size: 2rem;
+  }
+
+  .desc {
+    width: 65%;
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    width: 65%;
+  }
+
+  .incre {
+    display: none;
+    padding-top: 5rem;
+  }
+
+  .skill {
+    flex-direction: column;
+    padding-top: 65rem;
+  }
+
+  .name {
+
+    opacity: 0;
+  }
+
+  .rightSkillContainer {
+
+
+    margin-top: 5px;
+    width: 70%;
+
+  }
+
+  .skillsLogo {
+
+    height: 3.5rem;
+    width: 60px;
+    transition: all 0.5s;
+  }
+
+
+  .skillsLogo:hover {
+    transform: scale(1.8);
+  }
+
+  .tech {
+    padding-top: 11rem;
+    padding-left: 9%;
+    width: 80%;
+  }
+
+  .tech h1 {
+    color: #e84949;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .tech span {
+    font-size: 4rem;
+  }
+
+  .skillSubHeading {
+    margin-top: 0.2rem;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .skillSubHeading p {
+    font-weight: 600;
+    padding-top: 1rem;
+    font-size: 18px;
+  }
 }

@@ -4,37 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./Images/userAsset/icon.ico" type="image/x-icon" />
 
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+
+
     <title>avrsolution</title>
 </head>
 
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <div class="container">
-
             <div class="subContainer">
+                <nav class="nav-bar" id="v-nav-resp">
+                    <ul class="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li> <a href="">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
+                <div class="navbar" onclick="burgur()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
                 <div class="logo">
                     <h1><i> A </i></h1>
                 </div>
                 <div class="tagh1">
                     <h1>run</h1>
                 </div>
-                <div class="header">
-                    <a href="#">Home</a>
-                    <a href="#About">About</a>
-                    <a href="">Project</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#skills">Skills</a>
-                    </header>
-                </div>
-                <div class="imgae">
+                <div class="image">
                     <img src="./img/DSC_4738-removebg.png" alt="">
                 </div>
-                <div class="about" id="About">
+                <div class="about " id="About incre">
                     <h1>Hi! Arun Rathod</h1>
                     <div class="heading">
                         I am a <span class="role"></span>
@@ -47,7 +54,7 @@
 
                 </div>
                 <div class="name">
-                    <h1><i>Arun Rathod </i></h1>
+                    <h1><i class="span">Arun Rathod</i></h1>
                 </div>
             </div>
         </div>
@@ -101,13 +108,15 @@
                 <div class="contactUsForm">
                     <form action="https://formspree.io/f/mvojrpln" method="POST">*-
                         <div class="formFieldContainer">
-                            <input class="formField" type="text" name="name" placeholder="Enter your name"  required/>
+                            <input class="formField" type="text" name="name" placeholder="Enter your name" required />
                         </div>
                         <div class="formFieldContainer">
-                            <input class="formField" type="email" name="email" placeholder="Enter your email address" required/>
+                            <input class="formField" type="email" name="email" placeholder="Enter your email address"
+                                required />
                         </div>
                         <div class="formFieldContainer">
-                            <input class="formField" type="text" name="Subject" placeholder="Enter your Subject address" />
+                            <input class="formField" type="text" name="Subject"
+                                placeholder="Enter your Subject address" />
                         </div>
                         <div class="formFieldContainer">
                             <textarea class="formField" name="message" id="" cols="30" rows="10"
@@ -138,8 +147,6 @@
         </footer>
     </div>
 </body>
-
-
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 <script>
@@ -156,19 +163,15 @@
         backDelay: 1000,
     });
 
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.gmail.com",
-            Username: "sender@email_address.com",
-            Password: "Enter your password",
-            To: 'receiver@email_address.com',
-            From: "sender@email_address.com",
-            Subject: "Sending Email using javascript",
-            Body: "Well that was easy!!",
-        })
-            .then(function (message) {
-                alert("mail sent successfully")
-            });
+
+    function burgur() {
+        document.getElementById("v-nav-resp").style.visibility = "visible";
+        var elements = document.getElementsByClassName("about");
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.paddingTop = "12rem";
+        }
+
     }
 </script>
 
